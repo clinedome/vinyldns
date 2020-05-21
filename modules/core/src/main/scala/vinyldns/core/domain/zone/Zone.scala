@@ -68,6 +68,7 @@ final case class Zone(
     sb.append("transferConnection=\"").append(transferConnection.toString).append("\"; ")
     sb.append("reverse=\"").append(isReverse).append("\"; ")
     sb.append("isTest=\"").append(isTest).append("\"; ")
+    sb.append("backendId=\"").append(backendId.getOrElse("")).append("\"; ")
     sb.append("created=\"").append(created).append("\"; ")
     updated.map(sb.append("updated=\"").append(_).append("\"; "))
     latestSync.map(sb.append("latestSync=\"").append(_).append("\"; "))
